@@ -107,7 +107,7 @@ html, body {
     flex-direction: column;
     padding: 20px;
     height: 100%;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 #message-list {
