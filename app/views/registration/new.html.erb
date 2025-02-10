@@ -1,0 +1,16 @@
+<div class="login">
+<%= form_with url: registration_index_path, html: {multipart: true} do |form| %>
+<h1 style="text-align: center;">Registration</h1>
+    <div style="margin-bottom: 15px;">
+      <%= form.email_field :email_address, required: true,
+        autofocus: true, autocomplete: "email", placeholder: "Enter your email address", value: params[:email_address], style: "width: 100%; padding: 12px; box-sizing: border-box;" %>
+    </div>
+    <div style="margin-bottom: 15px;">
+      <%= form.password_field :password, required: true, autocomplete: "new-password", placeholder: "Create a password", maxlength: 72, style: "width: 100%; padding: 12px; box-sizing: border-box;" %>
+    </div>
+
+    <%= form.submit "Sign up", style: "width: 100%; padding: 12px; box-sizing: border-box;" %>
+    <br>
+    <%= link_to "Back to login", new_session_path %>
+  <% end %>
+</div>

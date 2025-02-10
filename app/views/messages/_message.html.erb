@@ -1,0 +1,6 @@
+<div id="<%= dom_id message %>" class="message">
+  <%= content_tag :span, message.user.email_address , class: "user-email" %>
+  <%= message.content %>
+  <%= content_tag :span, message.created_at.in_time_zone("Asia/Bangkok").strftime("%H:%M"), class: "message-time" %>
+  <%= button_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete" %>
+</div>
